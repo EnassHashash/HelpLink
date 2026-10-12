@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HelpLink | Community Help Platform</title>
+  <meta name="description" content="HelpLink connects community members who need help with people willing to share their skills.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="HelpLink home">
+        <span class="logo-mark" aria-hidden="true">H</span>HelpLink
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#requests">Requests</a></li>
+          <li><a href="#helpers">Helpers</a></li>
+          <li><a href="#tracking">My request</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <a href="#login" class="btn btn-ghost">Log in</a>
+        <a href="#new-request" class="btn btn-primary">Ask for help</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Community help, organised</p>
+          <h1 id="hero-title">Need a hand? <span>Find the right helper</span> in minutes.</h1>
+          <p class="lead">Post a request, compare people who can help, chat, track progress and say thanks. No more lost WhatsApp messages.</p>
+          <div class="hero-buttons">
+            <a href="#new-request" class="btn btn-primary btn-lg">Post a request</a>
+            <a href="#helpers" class="btn btn-outline btn-lg">Offer my skills</a>
+          </div>
+          <ul class="hero-stats" aria-label="Platform statistics">
+            <li><strong>1,240</strong> requests solved</li>
+            <li><strong>380</strong> active helpers</li>
+            <li><strong>4.8</strong> average rating</li>
+          </ul>
+        </div>
+        <aside class="urgent-box" aria-label="Urgent request">
+          <span class="badge badge-urgent">Urgent</span>
+          <h2>Water leak in the kitchen</h2>
+          <p>Posted 4 minutes ago &middot; Tripoli &middot; Plumbing</p>
+          <p class="urgent-note">3 helpers nearby have been alerted.</p>
+          <a href="#requests" class="btn btn-danger">See urgent requests</a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="section" id="how-it-works" aria-labelledby="how-title">
+      <div class="container">
+        <h2 id="how-title" class="section-title">How HelpLink works</h2>
+        <ol class="steps">
+          <li class="card step">
+            <span class="step-number">1</span>
+            <h3>Post a request</h3>
+            <p>Describe the task, choose a category and mark it urgent if needed.</p>
+          </li>
+          <li class="card step">
+            <span class="step-number">2</span>
+            <h3>Compare offers</h3>
+            <p>See ratings, skills and availability of everyone who offers help.</p>
+          </li>
+          <li class="card step">
+            <span class="step-number">3</span>
+            <h3>Chat &amp; get it done</h3>
+            <p>Agree on details in the app and follow the status of your request.</p>
+          </li>
+          <li class="card step">
+            <span class="step-number">4</span>
+            <h3>Rate &amp; build trust</h3>
+            <p>Leave a review so the whole community knows who is reliable.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== CATEGORIES ========== -->
+    <section class="section section-alt" aria-labelledby="cat-title">
+      <div class="container">
+        <h2 id="cat-title" class="section-title">Browse by category</h2>
+        <ul class="category-grid">
+          <li><a class="category" href="#requests"><span class="cat-icon c1" aria-hidden="true">&lt;/&gt;</span>Tech support</a></li>
+          <li><a class="category" href="#requests"><span class="cat-icon c2" aria-hidden="true">&#9874;</span>Home repair</a></li>
+          <li><a class="category" href="#requests"><span class="cat-icon c3" aria-hidden="true">CV</span>Career &amp; CV</a></li>
+          <li><a class="category" href="#requests"><span class="cat-icon c4" aria-hidden="true">&#9998;</span>Design</a></li>
+          <li><a class="category" href="#requests"><span class="cat-icon c5" aria-hidden="true">&#9733;</span>Study help</a></li>
+          <li><a class="category" href="#requests"><span class="cat-icon c6" aria-hidden="true">&#9829;</span>Volunteering</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== REQUEST FEED ========== -->
+    <section class="section" id="requests" aria-labelledby="req-title">
+      <div class="container">
+        <h2 id="req-title" class="section-title">Open requests</h2>
+
+        <form class="filter-bar" action="#requests" method="get" aria-label="Filter requests">
+          <div class="field">
+            <label for="search">Search</label>
+            <input type="search" id="search" name="search" placeholder="e.g. install software">
+          </div>
+          <div class="field">
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="">All categories</option>
+              <option>Tech support</option>
+              <option>Home repair</option>
+              <option>Career &amp; CV</option>
+              <option>Design</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="urgency">Urgency</label>
+            <select id="urgency" name="urgency">
+              <option value="">Any</option>
+              <option>Urgent only</option>
+              <option>Normal</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Apply filters</button>
+        </form>
+
+        <div class="card-grid">
+
+          <article class="card request-card urgent">
+            <header class="card-head">
+              <span class="badge badge-urgent">Urgent</span>
+              <span class="badge badge-status">Open</span>
+            </header>
+            <h3>Water leak in the kitchen</h3>
+            <p>Pipe under the sink is leaking. Need a plumber as soon as possible.</p>
+            <ul class="meta">
+              <li>Home repair</li>
+              <li>Tripoli</li>
+              <li>4 min ago</li>
+            </ul>
+            <footer class="card-foot">
+              <span class="offers-count">3 offers</span>
+              <a href="#tracking" class="btn btn-danger btn-sm">Offer help</a>
+            </footer>
+          </article>
+
+          <article class="card request-card">
+            <header class="card-head">
+              <span class="badge badge-category">Tech support</span>
+              <span class="badge badge-status">Open</span>
+            </header>
+            <h3>Install software on my laptop</h3>
+            <p>I am 68 and need step-by-step help installing a video-call app.</p>
+            <ul class="meta">
+              <li>Remote or in person</li>
+              <li>Mina</li>
+              <li>2 h ago</li>
+            </ul>
+            <footer class="card-foot">
+              <span class="offers-count">1 offer</span>
+              <a href="#tracking" class="btn btn-primary btn-sm">Offer help</a>
+            </footer>
+          </article>
+
+          <article class="card request-card">
+            <header class="card-head">
+              <span class="badge badge-category">Study help</span>
+              <span class="badge badge-status">Open</span>
+            </header>
+            <h3>Review my programming project</h3>
+            <p>Second-year student needs feedback on a Java project before Friday.</p>
+            <ul class="meta">
+              <li>Remote</li>
+              <li>Tripoli</li>
+              <li>Yesterday</li>
+            </ul>
+            <footer class="card-foot">
+              <span class="offers-count">5 offers</span>
+              <a href="#tracking" class="btn btn-primary btn-sm">Offer help</a>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HELPERS ========== -->
+    <section class="section section-alt" id="helpers" aria-labelledby="helpers-title">
+      <div class="container">
+        <h2 id="helpers-title" class="section-title">Top-rated helpers</h2>
+        <div class="card-grid">
+
+          <article class="card helper-card">
+            <div class="avatar a1" aria-hidden="true">RK</div>
+            <h3>Rami K.</h3>
+            <p class="rating" aria-label="Rated 4.9 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4.9 (42)</span></p>
+            <ul class="tags">
+              <li>Electrician</li><li>Plumbing</li><li>Weekends</li>
+            </ul>
+            <a href="#tracking" class="btn btn-outline btn-block">View profile</a>
+          </article>
+
+          <article class="card helper-card">
+            <div class="avatar a2" aria-hidden="true">LS</div>
+            <h3>Lina S.</h3>
+            <p class="rating" aria-label="Rated 4.8 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733; <span>4.8 (31)</span></p>
+            <ul class="tags">
+              <li>Logo design</li><li>Branding</li><li>Evenings</li>
+            </ul>
+            <a href="#tracking" class="btn btn-outline btn-block">View profile</a>
+          </article>
+
+          <article class="card helper-card">
+            <div class="avatar a3" aria-hidden="true">OM</div>
+            <h3>Omar M.</h3>
+            <p class="rating" aria-label="Rated 4.7 out of 5">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.7 (58)</span></p>
+            <ul class="tags">
+              <li>Programming</li><li>Code review</li><li>Remote</li>
+            </ul>
+            <a href="#tracking" class="btn btn-outline btn-block">View profile</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NEW REQUEST FORM ========== -->
+    <section class="section" id="new-request" aria-labelledby="form-title">
+      <div class="container narrow">
+        <h2 id="form-title" class="section-title">Post a help request</h2>
+        <form class="form-card" action="#tracking" method="post">
+
+          <fieldset>
+            <legend>1. What do you need?</legend>
+
+            <div class="field">
+              <label for="title">Title</label>
+              <input type="text" id="title" name="title" placeholder="Short summary of your need" required>
+            </div>
+
+            <div class="field">
+              <label for="req-category">Category</label>
+              <select id="req-category" name="category" required>
+                <option value="">Choose a category</option>
+                <option>Tech support</option>
+                <option>Home repair</option>
+                <option>Career &amp; CV</option>
+                <option>Design</option>
+                <option>Study help</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="description">Description</label>
+              <textarea id="description" name="description" rows="4" placeholder="Give the helper enough details to understand the task" required></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. When and where?</legend>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="date">Preferred date</label>
+                <input type="date" id="date" name="date">
+              </div>
+              <div class="field">
+                <label for="city">Location</label>
+                <input type="text" id="city" name="city" placeholder="City or neighbourhood">
+              </div>
+            </div>
+
+            <div class="field">
+              <span class="label">Type of help</span>
+              <div class="radio-group">
+                <label><input type="radio" name="mode" value="remote" checked> Remote</label>
+                <label><input type="radio" name="mode" value="in-person"> In person</label>
+              </div>
+            </div>
+
+            <label class="urgent-toggle">
+              <input type="checkbox" name="urgent">
+              <span><strong>This is urgent</strong><br>Nearby helpers will be alerted immediately.</span>
+            </label>
+          </fieldset>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost">Save draft</button>
+            <button type="submit" class="btn btn-primary btn-lg">Publish request</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========== REQUEST TRACKING ========== -->
+    <section class="section section-alt" id="tracking" aria-labelledby="track-title">
+      <div class="container narrow">
+        <h2 id="track-title" class="section-title">Track my request</h2>
+
+        <article class="card tracking-card">
+          <header>
+            <h3>Install software on my laptop</h3>
+            <span class="badge badge-progress">In progress</span>
+          </header>
+
+          <ol class="tracker" aria-label="Request progress">
+            <li class="done">Open</li>
+            <li class="done">Matched</li>
+            <li class="current" aria-current="step">In progress</li>
+            <li>Completed</li>
+            <li>Rated</li>
+          </ol>
+
+          <div class="offer">
+            <div class="avatar a1" aria-hidden="true">RK</div>
+            <div class="offer-info">
+              <h4>Rami K.</h4>
+              <p>Accepted offer &middot; Saturday 10:00 &middot; 1 hour</p>
+            </div>
+            <a href="#login" class="btn btn-outline btn-sm">Open chat</a>
+          </div>
+
+          <form class="review-form" action="#tracking" method="post">
+            <h4>Rate your helper</h4>
+            <fieldset class="stars">
+              <legend class="sr-only">Rating</legend>
+              <input type="radio" id="s5" name="rating" value="5"><label for="s5" title="5 stars">&#9733;</label>
+              <input type="radio" id="s4" name="rating" value="4"><label for="s4" title="4 stars">&#9733;</label>
+              <input type="radio" id="s3" name="rating" value="3"><label for="s3" title="3 stars">&#9733;</label>
+              <input type="radio" id="s2" name="rating" value="2"><label for="s2" title="2 stars">&#9733;</label>
+              <input type="radio" id="s1" name="rating" value="1"><label for="s1" title="1 star">&#9733;</label>
+            </fieldset>
+            <div class="field">
+              <label for="comment">Comment</label>
+              <textarea id="comment" name="comment" rows="3" placeholder="How was your experience?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit review</button>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <!-- ========== LOGIN ========== -->
+    <section class="section" id="login" aria-labelledby="login-title">
+      <div class="container narrow">
+        <form class="form-card login-card" action="#top" method="post">
+          <h2 id="login-title">Welcome back</h2>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Log in</button>
+          <p class="form-note">New here? <a href="#top">Create an account</a></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <h2 class="footer-title">HelpLink</h2>
+        <p>A community platform to request and offer help.</p>
+      </section>
+      <nav aria-label="Footer navigation">
+        <h2 class="footer-title">Explore</h2>
+        <ul>
+          <li><a href="#requests">Requests</a></li>
+          <li><a href="#helpers">Helpers</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2 class="footer-title">Contact</h2>
+        <address>
+          support@helplink.example<br>
+          Community Organisation, Lebanon
+        </address>
+      </section>
+    </div>
+    <p class="copyright">&copy; 2026 HelpLink. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
